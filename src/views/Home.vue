@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="navbar">
-        <img style="float:left; margin-left:100px;margin-top:20px;" width="200px" src="../assets/logosnowbank.svg" height="100%">
+        <img style="float:left; margin-left:100px;margin-top:20px;" width="200px" src="../assets/logosnowbank.png" height="100%">
   <a href="#home" style="float:right; margin-right:80px;color:#333; font-size:15px;margin-top:15px;">Docs</a>
   <a  href="#cvd" style="float:right;margin-right:5px; color:#333;font-size:15px;margin-top:15px;">Twitter</a>
   <a href="#contact" style="float:right;margin-right:5px;color:#333;font-size:15px;margin-top:15px;">Discord</a>
