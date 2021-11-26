@@ -2,9 +2,9 @@
   <div class="home">
     <div class="navbar">
         <img style="float:left; margin-left:100px;margin-top:20px;" width="200px" src="../assets/logosnowbank.png" height="100%">
-  <a href="#home" style="float:right; margin-right:80px;color:#333; font-size:15px;margin-top:15px;">Docs</a>
-  <a  href="#cvd" style="float:right;margin-right:5px; color:#333;font-size:15px;margin-top:15px;">Twitter</a>
-  <a href="#contact" style="float:right;margin-right:5px;color:#333;font-size:15px;margin-top:15px;">Discord</a>
+  <a href="https://magicrabit23.gitbook.io/snowfarm-dao-whitepaper/" style="float:right; margin-right:80px;color:#333; font-size:15px;margin-top:15px;">Docs</a>
+  <a  href="" style="float:right;margin-right:5px; color:#333;font-size:15px;margin-top:15px;">Twitter</a>
+  <a href="https://discord.gg/MJ8hhYQxtK" style="float:right;margin-right:5px;color:#333;font-size:15px;margin-top:15px;">Discord</a>
 </div>
     <img alt="Vue logo" src="../assets/home.png" width="100%" style="margin-top:100px;" v-on:click="routerchange">
     <div class="start">
@@ -21,7 +21,7 @@ export default {
   methods:{
     routerchange(){
       console.log('lolo')
-      this.$router.push('/About')
+      this.$router.push('/app')
     }
   }
   

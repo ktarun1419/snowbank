@@ -6,13 +6,16 @@
       <img src="../assets/dash.png" alt="" width="100%" style="margin-top:10%;cursor: pointer;" v-on:click="stake">
       <img src="../assets/dashboard1.png" alt="" width="100%" style="cursor: pointer;" v-on:click="mintf" >
       <img src="../assets/dashboard2.png" alt="" width="100%" style="margin-top:10%">
-      <img src="../assets/twitter.png" alt="" width="50%" style="margin-top:10%">
-      <a href="https://discord.gg/MJ8hhYQxtK"><img src="../assets/discord.png" alt="" width="25%" style="margin-top:10%;cursor:pointer" > </a>
-     <a href="https://magicrabit23.gitbook.io/snowfarm-dao-whitepaper/"><img src="../assets/white.png" alt="" width="25%" style="margin-top:10%; cursor:pointer" height="20%"></a> 
+      <img src="../assets/space.png" alt="" width="100%" style="margin-top:-10px">
+      <img src="../assets/twitter.png" alt="" width="50%" style="margin-top:-10px">
+      
+      <a href="https://discord.gg/MJ8hhYQxtK"><img src="../assets/discord.png" alt="" width="25%" style="margin-top:-10px;cursor:pointer" > </a>
+     <a href="https://magicrabit23.gitbook.io/snowfarm-dao-whitepaper/"><img src="../assets/white.png" alt="" width="25%" style="margin-top:-10px; cursor:pointer" height="20%"></a> 
       <!-- <img src="../assets/dashboard2.png" alt="" width="100%" height="50%"> -->
     </div>
     <div class="div2">
-      <button style="padding: 12px 48px; font-weight: 500; font-size: 13px; color: #30363a; float:right; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806; margin-right:20px; margin-top:30px; "> Disconnect</button>
+      
+      <button style="padding: 12px 48px; font-weight: 500; font-size: 13px; color: #30363a; float:right; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806; margin-right:20px; margin-top:30px; "> Connect</button>
       <button style="float:right; padding: 12px 48px;background-color:#c3f53c; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806; margin-right:20px; margin-top:30px;">Buy $SF</button>
       
       <div class="center" v-if="show1">
@@ -40,7 +43,7 @@
         <input type="string" name="" id="amount" placeholder="Enter" style="width:300px; background-color:black; border:3px solid white; height:24px; padding:12px; color:white; margin-top:30px"><h2 id="currency" style="color:white;">{{this.currency}}</h2>
         
         <button style="margin-top:100px;padding: 12px 48px; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806; width:200px; margin-bottom:50px" v-on:click="back">Back</button>
-      <button style="margin-top:100px;padding: 12px 48px;background-color:#c3f53c; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806; width:200px; margin-bottom:50px" v-on:click="buy"> Buy Now</button>
+      <button style="margin-top:100px;padding: 12px 48px;background-color:#c3f53c; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806; width:200px; margin-bottom:50px" v-on:click="buy">Mint SnowFarm</button>
       </div>
       <div class="center" v-if="show3">
         <h2 style="font-family: Montserrat Medium; color:#fff;font-size: 24px; font-weight:800; padding:10px; "> Transfer the desired staked currency to following address:</h2>
@@ -52,7 +55,7 @@
       <div class="center" v-if="dashboard">
         <span style="float:left; margin-top:40px; margin-left:50px;width:300px; border:3px solid white; height:100px">
         <h3 style="color: #919fa6;font-size: 18px;font-weight: 400;font-family: Montserrat;padding-bottom: 6px;">SF Price</h3>
-        <h3 style="color:white">$2367</h3>
+        <h3 style="color:white">$3023</h3>
       </span>
       <span style="float:right; margin-top:40px; margin-right:50px;width:300px; border:3px solid white; height:100px">
         <h3 style="color: #919fa6;font-size: 18px;font-weight: 400;font-family: Montserrat;padding-bottom: 6px;">Market Cap</h3>
@@ -130,8 +133,11 @@
     </div>
   </div>
 </template>
+
+
+
 <script>
-import Web3 from 'web3'
+import Web3 from 'web3';
 export default {
   name:'About',
   data(){
@@ -324,18 +330,19 @@ this.show1=false;
 <style lang="scss">
 .div1{
   float: left;
-  width: 20%;
+  width: 20.3%;
   //height:100%;
   background-color: rgba(30,54,112,255);
   backdrop-filter: blur(100px);
+  margin-left: -8px;
 }
 .div2{
   display:inline-block;
-  width: 80%;
+  width: 80.1%;
   
    background: url(snowi.jpeg) ; 
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   align-content: center;
 
   
@@ -346,7 +353,8 @@ this.show1=false;
   padding: 0%;
   margin-top: 10%;
   width: 800px;
-  margin-left: 10%;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom:4%;
   backdrop-filter: blur(100px);
   
