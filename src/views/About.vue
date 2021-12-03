@@ -509,7 +509,7 @@ this.show1=false;
   
   margin-left: -8px;
   margin-top:-10px;
-  opacity: 90%;
+  opacity: 0.95;
 }
 .div2{
   margin-top:-10px;
@@ -536,7 +536,7 @@ this.show1=false;
   margin-right: auto;
   margin-bottom:4.6%;
   
-  opacity: 100%;
+  opacity:0.88;
   
 }
 
