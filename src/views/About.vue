@@ -503,7 +503,7 @@ this.show1=false;
 <style lang="scss">
 .div1{
   float: left;
-  width: 20.3%;
+  width: 20%;
   //height:100%;
   background-color: rgba(30,54,112,255);
   
@@ -514,7 +514,7 @@ this.show1=false;
 .div2{
   margin-top:-10px;
   display:inline-block;
-  width: 79.7%;
+  width: 80%;
   height: 100%;
   margin-left: -8px;
   
@@ -534,7 +534,6 @@ this.show1=false;
   width: 800px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom:4.6%;
   
   opacity:0.88;
   
