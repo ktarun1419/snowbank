@@ -1,11 +1,11 @@
 <template>
   <div>
     <div class="div1">
-      <a href="https://snowtrace.io/address/0xa3Aa335f1B9Ad61fc5Ce5485E5cCC547FB86cFb3"><img src="../assets/namedash1.png" alt="" width="100%" style="margin-top:10%"></a>
-      <img src="../assets/dashdash.png" alt="" width="100%" style="margin-top:100px;cursor: pointer;" v-on:click="dash">
-      <img src="../assets/dash.png" alt="" width="100%" style="margin-top:10%;cursor: pointer;" v-on:click="stake">
+      <a href="https://snowtrace.io/address/0xa3Aa335f1B9Ad61fc5Ce5485E5cCC547FB86cFb3"><img src="../assets/namedash1.png" alt="" width="100%" style="margin-top:0px"></a>
+      <img src="../assets/dashdash.png" alt="" width="100%" style="cursor: pointer; margin-top:0px" v-on:click="dash">
+      <img src="../assets/dash.png" alt="" width="100%" style="cursor: pointer;" v-on:click="stake">
       <img src="../assets/dashboard1.png" alt="" width="100%" style="cursor: pointer;" v-on:click="mintf" >
-      <img src="../assets/dashboard2.png" alt="" width="100%" style="margin-top:50px">
+      <img src="../assets/home2.png" alt="" width="100%" style="margin-top:0px">
       <img src="../assets/space.png" alt="" width="100%" style="margin-top:-10px">
       <img src="../assets/twitter.png" alt="" width="50%" style="margin-top:-10px">
       
@@ -38,23 +38,23 @@
       </div>
       <div class="center" v-if="show2">
         
-        <img src="../assets/progress2.png" alt="" width="600px" height="100px" style="border:3px solid white; margin-top:10px">
+        <img src="../assets/progress2.png" alt="" width="600px" height="100px" style="border:3px solid white; margin-top:30px">
         <!-- <h2 style="font-family: Montserrat Medium; color:#fff;font-size: 24px; font-weight:800; padding:10px; "> Enter amount</h2> -->
-        <input type="number" name="" value="1" id="amount" placeholder="Enter" style="width:300px; background-color:black; border:3px solid white; height:24px; padding:12px; color:white; margin-top:10px;margin-left:100px">
+        <input type="number" name="" value="1" id="amount" placeholder="Enter" style="width:300px; background-color:black; border:3px solid white; height:24px; padding:12px; color:white; margin-top:25px;margin-left:100px">
         
-        <button style="float:right;background-color:#c3f53c;padding: 12px 48px; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806; widht:100px; margin-top:15px; margin-right:20px" v-on:click="check">Check</button>
-        <p id="currency" style="color: #fff;font-size:20px;font-weight: 400;font-family: Montserrat; float:right; margin-right:120px">{{this.currency}}</p>
-        <h2 style="color: #fff;font-size: 18px; padding:10px;font-weight: 400;font-family: Montserrat;padding-bottom: 6px; float:left;  margin-top:10px; margin-right:200px;">Your Staked Balance</h2>
-        <h2 style="color: #fff;font-size: 18px;padding:10px;font-weight: 400;font-family: Montserrat;padding-bottom: 6px; float:right;  margin-top:10px">{{this.staked}}</h2><br>
-        <h2 style="color: #fff;font-size: 18px;padding:10px;font-weight: 400;font-family: Montserrat;padding-bottom: 6px; float:left;  margin-top:20px;margin-right:400px;">Next Reward Amount</h2>
-        <h2 style="color: #fff;font-size: 18px;padding:10px;font-weight: 400;font-family: Montserrat;padding-bottom: 6px; float:right;  margin-top:20px">{{this.reward}}</h2><br>
-        <h2 style="color: #fff;font-size: 18px;padding:10px;font-weight: 400;font-family: Montserrat;padding-bottom: 6px; float:left;  margin-top:20px;margin-right:400px;">Next Reward Yield</h2>
-        <h2 style="color: #fff;font-size: 18px;padding:10px;font-weight: 400;font-family: Montserrat;padding-bottom: 6px; float:right;  margin-top:20px">2.19%</h2><br>
-        <h2 style="color: #fff;font-size: 18px;padding:10px;font-weight: 400;font-family: Montserrat;padding-bottom: 6px; float:left;  margin-top:20px;margin-right:400px;">ROI(5-Day Rate)</h2><br>
-        <h2 style="color: #fff;font-size: 18px;padding:10px;font-weight: 400;font-family: Montserrat;padding-bottom: 6px; float:right;  margin-top:20px">37.14%</h2><br>
+        <button style="float:right;background-color:#c3f53c;padding: 12px 48px; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806; widht:100px; margin-top:25px; margin-right:20px" v-on:click="check">Check</button>
+        <p id="currency" style="color: #fff;font-size:20px;font-weight: 400;font-family: Montserrat; float:right; margin-right:120px;margin-top:35px">{{this.currency}}</p>
+        <h2 style="color: #fff;font-size: 15px; padding:20px;font-weight: 400;font-family: Montserrat;padding-bottom: 1px; float:left;  margin-top:50px; margin-right:200px;">Your Staked Balance</h2>
+        <h2 style="color: #fff;font-size: 15px;padding:20px;font-weight: 400;font-family: Montserrat;padding-bottom: 1px; float:right;  margin-top:50px">{{this.staked}}</h2><br>
+        <h2 style="color: #fff;font-size: 15px;padding:20px;font-weight: 400;font-family: Montserrat;padding-bottom: 1px; float:left;  margin-top:5px;margin-right:400px;">Next Reward Amount</h2>
+        <h2 style="color: #fff;font-size: 15px;padding:20px;font-weight: 400;font-family: Montserrat;padding-bottom: 1px; float:right;  margin-top:5px">{{this.reward}}</h2><br>
+        <h2 style="color: #fff;font-size: 15px;padding:20px;font-weight: 400;font-family: Montserrat;padding-bottom: 1px; float:left;  margin-top:5px;margin-right:400px;">Next Reward Yield</h2>
+        <h2 style="color: #fff;font-size: 15px;padding:20px;font-weight: 400;font-family: Montserrat;padding-bottom: 1px; float:right;  margin-top:5px">2.19%</h2><br>
+        <h2 style="color: #fff;font-size: 15px;padding:20px;font-weight: 400;font-family: Montserrat;padding-bottom: 1px; float:left;  margin-top:5px;margin-right:400px;">ROI(5-Day Rate)</h2><br>
+        <h2 style="color: #fff;font-size: 15px;padding:20px;font-weight: 400;font-family: Montserrat;padding-bottom: 1px; float:right;  margin-top:5px">37.14%</h2><br>
         
-        <button style="margin-top:0px;padding: 12px 48px; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806; width:200px;" v-on:click="back">Back</button>
-      <button style="padding: 12px 48px;background-color:#c3f53c; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806; width:200px; float:left; margin-top:-0px; margin-left:200px" v-on:click="buy">Mint SnowFarm</button>
+        <button style="margin-top:20px;background-color:#c3f53c;padding: 12px 48px; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806; width:200px;" v-on:click="buy">Mint Snowfarm</button>
+      <button style="padding: 12px 48px; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806; width:200px; float:left; margin-top:20px; margin-left:200px" v-on:click="back">Back</button>
       </div>
       <div class="center" v-if="show3">
         <h2 style="font-family: Montserrat Medium; color:#fff;font-size: 24px; font-weight:800; padding:10px; "> Transfer the desired staked currency to following address:</h2>
@@ -180,41 +180,41 @@ export default {
       if (this.func=='btc') {
       const x=document.getElementById('amount').value
       this.staked=x*18.8554
-      this.reward=this.staked*.219
+      this.reward=this.staked*.0219
       }
       if (this.func=='eth') {
       const x=document.getElementById('amount').value
       this.staked=x*.0706
-      this.reward=this.staked*.219
+      this.reward=this.staked*.0219
       }
       if (this.func=='sol') {
       const x=document.getElementById('amount').value
       this.staked=x*.0760
-      this.reward=this.staked*.219
+      this.reward=this.staked*.0219
       }
       if (this.func=='xlm') {
       const x=document.getElementById('amount').value
       this.staked=x*.0129
-      this.reward=this.staked*.219
+      this.reward=this.staked*.0219
       }
       if (this.func=='dot') {
       const x=document.getElementById('amount').value
       this.staked=x*.0129
-      this.reward=this.staked*.219
+      this.reward=this.staked*.0219
       }if (this.func=='link') {
       const x=document.getElementById('amount').value
       this.staked=x*.0092
-      this.reward=this.staked*.219
+      this.reward=this.staked*.0219
       }
       if (this.func=='meta') {
       const x=document.getElementById('amount').value
       this.staked=x*1.557
-      this.reward=this.staked*.219
+      this.reward=this.staked*.0219
       }
       if (this.func=='teth') {
       const x=document.getElementById('amount').value
       this.staked=x*.00033
-      this.reward=this.staked*.219
+      this.reward=this.staked*.0219
       }
     
     },
@@ -428,7 +428,7 @@ this.show1=false;
   width: 800px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom:9%;
+  margin-bottom:5.8%;
   backdrop-filter: blur(100px);
 }
 
