@@ -464,6 +464,7 @@ this.show1=false;
   background-color: rgba(30,54,112,255);
   margin-left: -8px;
   margin-top:-10px;
+  opacity:0.95;
 }
 .div2{
   margin-top:-10px;
@@ -488,7 +489,7 @@ this.show1=false;
   margin-left: auto;
   margin-right: auto;
   margin-bottom:4.6%;
-  opacity:0.8;
+  opacity:0.88;
   
 }
 
