@@ -464,7 +464,6 @@ this.show1=false;
   background-color: rgba(30,54,112,255);
   margin-left: -8px;
   margin-top:-10px;
-  opacity: 10%;
 }
 .div2{
   margin-top:-10px;
