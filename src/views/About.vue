@@ -462,7 +462,6 @@ this.show1=false;
   width: 20.3%;
   //height:100%;
   background-color: rgba(30,54,112,255);
-  backdrop-filter: blur(100px);
   margin-left: -8px;
   margin-top:-10px;
   opacity: 10%;
@@ -490,7 +489,6 @@ this.show1=false;
   margin-left: auto;
   margin-right: auto;
   margin-bottom:4.6%;
-  backdrop-filter: blur(100px);
   opacity: 100%;
   
 }
