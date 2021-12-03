@@ -488,7 +488,6 @@ this.show1=false;
   margin-left: auto;
   margin-right: auto;
   margin-bottom:4.6%;
-  opacity: 100%;
   
 }
 
