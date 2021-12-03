@@ -1,5 +1,5 @@
 <template>
-  <div class="open">
+  <div>
     <div class="div1">
       <a href="https://snowtrace.io/address/0xa3Aa335f1B9Ad61fc5Ce5485E5cCC547FB86cFb3"><img src="../assets/namedash1.png" alt="" width="100%" style="margin-top:0px"></a>
       <img src="../assets/dashdash.png" alt="" width="100%" style="cursor: pointer; margin-top:7%" v-on:click="dash">
@@ -512,11 +512,15 @@ this.show1=false;
   opacity: .9;
 }
 .div2{
-  
+  margin-top:-10px;
   display:inline-block;
   width: 79.7%;
   height: 100%;
   margin-left: -8px;
+  background: url(snowi.jpeg) ; 
+  background-repeat: no-repeat;
+  background-size:cover;
+  align-content: center;
   
    
   
@@ -534,12 +538,6 @@ this.show1=false;
   
   opacity: 0.88;
   
-}.open{
-background: url(snowhd.gif) ; 
-  background-repeat: no-repeat;
-  background-size:cover;
-  align-content: center;
-margin-top:0px;
 }
 
 
