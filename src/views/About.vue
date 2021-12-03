@@ -534,6 +534,7 @@ this.show1=false;
   width: 800px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom:5%;
   
   opacity:0.88;
   
