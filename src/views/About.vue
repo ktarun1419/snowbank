@@ -520,7 +520,7 @@ this.show1=false;
   
    background: url(snowhd.gif) ; 
   background-repeat: no-repeat;
-  background-size:100% 100%;
+  background-size:cover;
   align-content: center;
 
   
