@@ -459,7 +459,7 @@ this.show1=false;
 <style lang="scss">
 .div1{
   float: left;
-  width: 20.3%;
+  width: 20%;
   //height:100%;
   background-color: rgba(30,54,112,255);
   margin-left: -8px;
@@ -469,7 +469,7 @@ this.show1=false;
 .div2{
   margin-top:-10px;
   display:inline-block;
-  width: 80.25%;
+  width: 80%;
   height: auto;
   
    background: url(snowhd.gif) ; 
