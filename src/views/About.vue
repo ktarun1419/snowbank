@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="open">
     <div class="div1">
       <a href="https://snowtrace.io/address/0xa3Aa335f1B9Ad61fc5Ce5485E5cCC547FB86cFb3"><img src="../assets/namedash1.png" alt="" width="100%" style="margin-top:0px"></a>
       <img src="../assets/dashdash.png" alt="" width="100%" style="cursor: pointer; margin-top:7%" v-on:click="dash">
@@ -503,26 +503,22 @@ this.show1=false;
 <style lang="scss">
 .div1{
   float: left;
-  width: 20%;
+  width: 20.3%;
   //height:100%;
   background-color: rgba(30,54,112,255);
   
   margin-left: -8px;
   margin-top:-10px;
-  opacity: 0.95;
+  opacity: .9;
 }
 .div2{
-  margin-top:-10px;
+  
   display:inline-block;
-  width: 80%;
+  width: 79.7%;
   height: 100%;
   margin-left: -8px;
   
-   background: url(snowhd.gif) ; 
-  background-repeat: no-repeat;
-  background-size:cover;
-  align-content: center;
-
+   
   
 }
 .center{
@@ -530,14 +526,20 @@ this.show1=false;
   
   height: 600px;
   padding: 0%;
-  margin-top: 10%;
+  margin-top:10%;
   width: 800px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom:5%;
+  margin-bottom: 5%;
   
-  opacity:0.88;
+  opacity: 0.88;
   
+}.open{
+background: url(snowhd.gif) ; 
+  background-repeat: no-repeat;
+  background-size:cover;
+  align-content: center;
+margin-top:0px;
 }
 
 
