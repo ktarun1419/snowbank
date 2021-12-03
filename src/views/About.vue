@@ -2,10 +2,10 @@
   <div>
     <div class="div1">
       <a href="https://snowtrace.io/address/0xa3Aa335f1B9Ad61fc5Ce5485E5cCC547FB86cFb3"><img src="../assets/namedash1.png" alt="" width="100%" style="margin-top:0px"></a>
-      <img src="../assets/dashdash.png" alt="" width="100%" style="cursor: pointer; margin-top:0px" v-on:click="dash">
+      <img src="../assets/dashdash.png" alt="" width="100%" style="cursor: pointer; margin-top:10px" v-on:click="dash">
       <img src="../assets/dash.png" alt="" width="100%" style="cursor: pointer;" v-on:click="stake">
-      <img src="../assets/dashboard1.png" alt="" width="100%" style="cursor: pointer;" v-on:click="mintf" >
-      <img src="../assets/home2.png" alt="" width="100%" style="margin-top:0px">
+      <img src="../assets/dashboard1.png" alt="" width="100%" style="cursor: pointer; margin-top:-5px" v-on:click="mintf" >
+      <img src="../assets/home2.png" alt="" width="100%" style="margin-top:-5px">
       <img src="../assets/space.png" alt="" width="100%" style="margin-top:-10px">
       <img src="../assets/twitter.png" alt="" width="50%" style="margin-top:-10px">
       
