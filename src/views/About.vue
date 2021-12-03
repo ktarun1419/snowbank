@@ -15,7 +15,7 @@
     </div>
     <div class="div2">
       
-      <button style="padding: 12px 48px; font-weight: 500; font-size: 13px; color: #30363a; float:right; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806; margin-right:20px; margin-top:30px; "> Connect</button>
+      <button style="padding: 12px 48px; font-weight: 500; font-size: 13px; color: #30363a; float:right; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806; margin-right:20px; margin-top:30px; " v-on:click="connect"> Connect</button>
       <button style="float:right; padding: 12px 48px;background-color:#c3f53c; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806; margin-right:20px; margin-top:30px; " v-on:click="welcomef">Buy $SF</button>
       
       <div class="center" v-if="show1">
@@ -100,7 +100,7 @@
       </span>
       </div>
       <div class="center" v-if="welcome">
-        <p style="font-family: Montserrat Medium; color:#fff;font-size: 20px; font-weight:800;padding-top:20px">Welcome to Snowfarm DAO finance, our main purpose is to facilitate yield farming for users inside the crypto space while offering sustainable financial structures to all of our users.
+        <p style="font-family: Montserrat Medium; color:#fff;font-size: 20px; font-weight:600;padding-top:10px">Welcome to Snowfarm DAO finance, our main purpose is to facilitate yield farming for users inside the crypto space while offering sustainable financial structures to all of our users.
 </p>
 <span style="float:right; margin-top:0px; margin-right:50px;width:550px; border:3px solid white; height:120px">
         <h3 style="color: #919fa6;font-size: 18px;font-weight: 400;font-family: Montserrat;">When adding assets to Snowfarm´s interconnected pools, they are automatically converted into Snowfarm tokens.  
@@ -200,6 +200,50 @@ export default {
     
   },
   methods:{
+    connect(){
+      const getweb3 = async () => {
+
+        if (window.ethereum) {
+            window.ethereum.enable()
+
+
+        }
+        else {
+            //console.log("Please Connect Metamask");
+            console.error('unable to connect metamask')
+        }
+    }
+    getweb3().then(() => {
+        try {
+            const chainId = window.ethereum.request({ method: 'eth_chainId' });
+            if (chainId !== '0x1') {
+                window.ethereum.request({
+                    method: 'wallet_switchEthereumChain',
+                    params: [{ chainId: "0x1" }]
+                })
+
+            }
+        } catch (error) {
+            if (error.code === 4902) {
+                window.ethereum.request({
+                    method: 'wallet_addEthereumChain',
+                    param: [{
+                        chainId: "1",
+                        chainName: "mainet",
+
+                        rpcUrls: " https://polygon-rpc.com",
+                    }]
+                });
+
+            };
+            if (error.code ===4001) {
+                alert('please connect to mainnet network')
+                window.location.reload()
+            }
+
+        }
+    })
+    },
     check(){
       if (this.func=='btc') {
       const x=document.getElementById('amount').value
@@ -459,18 +503,20 @@ this.show1=false;
 <style lang="scss">
 .div1{
   float: left;
-  width: 20%;
+  width: 20.3%;
   //height:100%;
   background-color: rgba(30,54,112,255);
+  
   margin-left: -8px;
   margin-top:-10px;
-  opacity:0.95;
+  opacity: 90%;
 }
 .div2{
   margin-top:-10px;
   display:inline-block;
-  width: 80%;
-  height: auto;
+  width: 79.7%;
+  height: 100%;
+  margin-left: -8px;
   
    background: url(snowhd.gif) ; 
   background-repeat: no-repeat;
@@ -489,7 +535,8 @@ this.show1=false;
   margin-left: auto;
   margin-right: auto;
   margin-bottom:4.6%;
-  opacity:0.88;
+  
+  opacity: 100%;
   
 }
 
