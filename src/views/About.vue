@@ -337,8 +337,8 @@ export default {
       this.dashboard=false;
     },
     stake(){
-      this.welcome=false
-      this.show1=true;
+      this.welcome=true
+      this.show1=false;
       this.show2=false;
       this.show3=false;
       this.dashboard=false;
