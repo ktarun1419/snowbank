@@ -13,7 +13,7 @@
      <a href="https://magicrabit23.gitbook.io/snowfarm-dao-whitepaper/"><img src="../assets/white.png" alt="" width="25%" style="margin-top:-10px; cursor:pointer" height="20%"></a> 
     </div> -->
     <div class="div1">
-     <a href="https://snowtrace.io/address/0xa3Aa335f1B9Ad61fc5Ce5485E5cCC547FB86cFb3"><h2  style=" color:white; margin-right:50px"><img src="../assets/namedash1.png" alt="" style="" width="40px">  SNOWFARM</h2></a> 
+     <a href="https://snowtrace.io/address/0xa3Aa335f1B9Ad61fc5Ce5485E5cCC547FB86cFb3"><h2  style=" color:white; margin-right:10%;margin-top:20%"><img src="../assets/namedash1.png" alt="" style="" width="40px">  SNOWFARM</h2></a> 
       <h4 style="padding:3%;margin-top:70px;font-size: 18px;font-weight: 400;font-family: Montserrat; color:white;cursor: pointer;  margin-right:80px " v-on:click="dash"><img src="../assets/dashlogo.svg" alt="" style=""> Dashboard</h4>
       <h4 style="padding:3%;font-size: 18px;font-weight: 400;font-family: Montserrat; color:white;cursor: pointer; margin-right:120px" v-on:click="stake"><img src="../assets/stakelogo.svg" alt="" style="">  Stake</h4>
       <h4 style="padding:3%;font-size: 18px;font-weight: 400;font-family: Montserrat; color:white;cursor: pointer; margin-right:120px" v-on:click="mintf"><img src="../assets/mintlogo.svg" alt="" style="">  Mint</h4>
@@ -552,18 +552,18 @@ box-sizing: content-box;
 .center{
   background-color:rgb(5, 20, 39);
   height: 600px;
-  padding: 3%;
+  padding: 3.2%;
 margin-top: 10%;
   width: 800px;
   margin-left: auto;
   margin-right: auto;
   opacity: 0.88;
-  margin-bottom: 4%;
+  margin-bottom: 5%;
   
 }.open{
   background: url(snowhd.gif) ; 
   background-repeat: no-repeat;
-  background-size:120% 100%;
+  background-size:100% 100%;
   background-attachment: fixed;
   margin-top: -10px;
 }
