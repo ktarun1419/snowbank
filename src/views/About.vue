@@ -23,7 +23,7 @@
       <h5 style="padding:3%; font-size: 18px;font-weight: 400;font-family: Montserrat;cursor: pointer;color:#919fa6" v-on:click="mintf">Polkadot(DOT)</h5>
       <h4 style="padding:3%;font-size: 18px;font-weight: 400;font-family: Montserrat; color:white;cursor: pointer; margin-right:120px" v-on:click="welcomef"><img src="../assets/buylogo.svg" alt="" style="" width="20px"> Buy</h4>
       <h4 style="padding:3%;font-size: 18px;font-weight: 400;font-family: Montserrat; color:white;cursor: pointer; margin-right:80px " v-on:click="welcomef"><img src="../assets/roadmaplogo.svg" alt="" style="" width="20px"> Roadmap</h4>
-      <h4 style="margin-bottom:60%; color:white;font-size: 18px;font-weight: 400;font-family: Montserrat; margin-right:100px "><img src="../assets/sflogo.svg" alt="" style="" width="20px"> SF pro </h4>
+      <h4 style="margin-bottom:64%; color:white;font-size: 18px;font-weight: 400;font-family: Montserrat; margin-right:100px "><img src="../assets/sflogo.svg" alt="" style="" width="20px"> SF pro </h4>
       
       <a href="https://discord.gg/MJ8hhYQxtK"><img src="../assets/disi.png" alt="" style="padding:5px;margin-left:20%;float:left; opacity:0.9;" width="40px"></a>
       <a href="https://magicrabit23.gitbook.io/snowfarm-dao-whitepaper/"><img src="../assets/paper.svg" alt="" style=" padding:5px;float:right; margin-right:20%"></a>
