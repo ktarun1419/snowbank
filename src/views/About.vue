@@ -14,16 +14,16 @@
     </div> -->
     <div class="div1">
      <a href="https://snowtrace.io/address/0xa3Aa335f1B9Ad61fc5Ce5485E5cCC547FB86cFb3"><h2  style=" color:white; margin-right:50px"><img src="../assets/namedash1.png" alt="" style="" width="40px">  SNOWFARM</h2></a> 
-      <h4 style="padding:2%; color:white;cursor: pointer;  margin-right:80px " v-on:click="dash"><img src="../assets/dashlogo.svg" alt="" style=""> Dashboard</h4>
-      <h4 style="padding:2%; color:white;cursor: pointer; margin-right:120px" v-on:click="stake"><img src="../assets/stakelogo.svg" alt="" style="">  Stake</h4>
-      <h4 style="padding:2%; color:white;cursor: pointer; margin-right:120px" v-on:click="mintf"><img src="../assets/mintlogo.svg" alt="" style="">  Mint</h4>
-      <h5 style="padding:2%;cursor: pointer; color:#919fa6" v-on:click="mintf">Solana(SOL)</h5>
-      <h5 style="padding:2%;cursor: pointer; color:#919fa6" v-on:click="mintf">Steller(XLM)</h5>
-      <h5 style="padding:2%; cursor: pointer;color:#919fa6" v-on:click="mintf">ChainLink(LINK)</h5>
-      <h5 style="padding:2%; cursor: pointer;color:#919fa6" v-on:click="mintf">Polkadot(DOT)</h5>
-      <h4 style="padding:2%; color:white;cursor: pointer; margin-right:120px" v-on:click="welcomef"><img src="../assets/buylogo.svg" alt="" style="" width="20px"> Buy</h4>
-      <h4 style="padding:2%; color:white;cursor: pointer; margin-right:80px " v-on:click="welcomef"><img src="../assets/roadmaplogo.svg" alt="" style="" width="20px"> Roadmap</h4>
-      <h4 style="margin-bottom:60%; color:white; margin-right:100px "><img src="../assets/sflogo.svg" alt="" style="" width="20px"> SF pro </h4>
+      <h4 style="padding:2%;margin-top:70px;font-size: 18px;font-weight: 400;font-family: Montserrat; color:white;cursor: pointer;  margin-right:80px " v-on:click="dash"><img src="../assets/dashlogo.svg" alt="" style=""> Dashboard</h4>
+      <h4 style="padding:2%;font-size: 18px;font-weight: 400;font-family: Montserrat; color:white;cursor: pointer; margin-right:120px" v-on:click="stake"><img src="../assets/stakelogo.svg" alt="" style="">  Stake</h4>
+      <h4 style="padding:2%;font-size: 18px;font-weight: 400;font-family: Montserrat; color:white;cursor: pointer; margin-right:120px" v-on:click="mintf"><img src="../assets/mintlogo.svg" alt="" style="">  Mint</h4>
+      <h5 style="padding:2%;cursor: pointer;font-size: 18px;font-weight: 400;font-family: Montserrat; color:#919fa6" v-on:click="mintf">Solana(SOL)</h5>
+      <h5 style="padding:2%;cursor: pointer;font-size: 18px;font-weight: 400;font-family: Montserrat; color:#919fa6" v-on:click="mintf">Steller(XLM)</h5>
+      <h5 style="padding:2%; cursor: pointer;font-size: 18px;font-weight: 400;font-family: Montserrat;color:#919fa6" v-on:click="mintf">ChainLink(LINK)</h5>
+      <h5 style="padding:2%; font-size: 18px;font-weight: 400;font-family: Montserrat;cursor: pointer;color:#919fa6" v-on:click="mintf">Polkadot(DOT)</h5>
+      <h4 style="padding:2%;font-size: 18px;font-weight: 400;font-family: Montserrat; color:white;cursor: pointer; margin-right:120px" v-on:click="welcomef"><img src="../assets/buylogo.svg" alt="" style="" width="20px"> Buy</h4>
+      <h4 style="padding:2%;font-size: 18px;font-weight: 400;font-family: Montserrat; color:white;cursor: pointer; margin-right:80px " v-on:click="welcomef"><img src="../assets/roadmaplogo.svg" alt="" style="" width="20px"> Roadmap</h4>
+      <h4 style="margin-bottom:60%; color:white;font-size: 18px;font-weight: 400;font-family: Montserrat; margin-right:100px "><img src="../assets/sflogo.svg" alt="" style="" width="20px"> SF pro </h4>
       
       <a href="https://discord.gg/MJ8hhYQxtK"><img src="../assets/disi.png" alt="" style=" padding:5px;margin-right:30px: opacity:0.9" width="40px"></a>
       <a href="https://magicrabit23.gitbook.io/snowfarm-dao-whitepaper/"><img src="../assets/paper.svg" alt="" style=" padding:5px; margin-left:30px"></a>
@@ -53,7 +53,7 @@
         <img src="../assets/tether.png" alt="" height="100px" width="120px" style="float:left; margin-top:50px; margin-left:20px;cursor: pointer; border:3px solid white;" v-on:click="tether">
         <img src="../assets/lte.png" alt="" height="100px" width="120px" style="float:left; margin-top:50px; margin-left:20px;cursor: pointer; border:3px solid white; background-color:black;" v-on:click="ether">
         <img src="../assets/meta.png" alt="" height="100px" width="120px" style="float:left; margin-top:50px; margin-left:20px;cursor: pointer;border:3px solid white;" v-on:click="metamask"><br>
-
+        <button style="padding: 12px 48px; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806; width:200px; float:left; margin-top:60px; margin-left:120px" v-on:click="welcomef">Back</button>
         <button style="margin-top:60px;padding: 12px 48px;background-color:#c3f53c; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806; width:200px; margin-bottom:50px">Next Step</button>
       </div>
       <div class="center" v-if="show2">
@@ -72,9 +72,9 @@
         <h2 style="color: #fff;font-size: 15px;padding:20px;font-weight: 400;font-family: Montserrat;padding-bottom: 1px; float:right;  margin-top:5px">2.19%</h2><br>
         <h2 style="color: #fff;font-size: 15px;padding:20px;font-weight: 400;font-family: Montserrat;padding-bottom: 1px; float:left;  margin-top:5px;margin-right:400px;">ROI(5-Day Rate)</h2><br>
         <h2 style="color: #fff;font-size: 15px;padding:20px;font-weight: 400;font-family: Montserrat;padding-bottom: 1px; float:right;  margin-top:5px">37.14%</h2><br>
-        
-        <button style="margin-top:20px;background-color:#c3f53c;padding: 12px 48px; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806; width:200px;" v-on:click="buy">Mint Snowfarm</button>
-      <button style="padding: 12px 48px; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806; width:200px; float:left; margin-top:20px; margin-left:200px" v-on:click="back">Back</button>
+        <button style="margin-top:20px;background-color:#c3f53c;padding: 12px 48px; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806; width:200px; margin-right:30px" v-on:click="buy">Mint Snowfarm</button>
+        <button style="margin-top:20px;padding: 12px 48px; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806; width:200px;" >Unstake</button>
+      <button style="padding: 12px 48px; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806; width:200px; float:left; margin-top:20px; margin-left:100px" v-on:click="back">Back</button>
       </div>
       <div class="center" v-if="show3">
         <h2 style="font-family: Montserrat Medium; color:#fff;font-size: 24px; font-weight:800; padding:60px; "> Transfer the desired staked currency to following address:</h2>
@@ -523,7 +523,7 @@ this.show1=false;
 <style lang="scss">
 .div1{
   float: left;
-  width: 20%;
+  width: 17%;
   height:100%;
   background-color: rgba(30,54,112,255);
   margin-top:-10px;
@@ -532,8 +532,8 @@ this.show1=false;
 .div2{
    margin-top:-10px;
   display:inline-block;
-  width: 79.7%;
-  height: 100%;
+  width: 83%;
+
   margin-left: -8px;
   padding: auto;
    background: url(snowhd.gif) ; 
@@ -541,7 +541,7 @@ this.show1=false;
   background-size:120% 100%;
   
   align-content: center;
-  padding-bottom: 2%;
+  padding-bottom: 7%;
   -moz-box-sizing: content-box;
 -webkit-box-sizing: content-box;
 box-sizing: content-box;
@@ -558,7 +558,7 @@ margin-top: 10%;
   margin-left: auto;
   margin-right: auto;
   opacity: 0.88;
-  margin-bottom: 2%;
+  margin-bottom: 1.3%;
   
 }.open{
   background: url(snowhd.gif) ; 
