@@ -1,17 +1,37 @@
 <template>
-  <div>
-    <div class="div1">
+  <div class="open">
+    <!-- <div class="div1">
       <a href="https://snowtrace.io/address/0xa3Aa335f1B9Ad61fc5Ce5485E5cCC547FB86cFb3"><img src="../assets/namedash1.png" alt="" width="100%" style="margin-top:0px"></a>
       <img src="../assets/dashdash.png" alt="" width="100%" style="cursor: pointer; margin-top:7%" v-on:click="dash">
       <img src="../assets/dash.png" alt="" width="100%" style="cursor: pointer;" v-on:click="stake">
       <img src="../assets/dashboard1.png" alt="" width="100%" style="cursor: pointer; margin-top:-5px" v-on:click="mintf" >
       <img src="../assets/home2.png" alt="" width="100%" style="margin-top:-5px">
-      <!-- <img src="../assets/space.png" alt="" width="100%" style="margin-top:-10px"> -->
+      
       <img src="../assets/twitter.png" alt="" width="50%" style="margin-top:-10px">
       
       <a href="https://discord.gg/MJ8hhYQxtK"><img src="../assets/discord.png" alt="" width="25%" style="margin-top:-10px;cursor:pointer" > </a>
      <a href="https://magicrabit23.gitbook.io/snowfarm-dao-whitepaper/"><img src="../assets/white.png" alt="" width="25%" style="margin-top:-10px; cursor:pointer" height="20%"></a> 
-      <!-- <img src="../assets/dashboard2.png" alt="" width="100%" height="50%"> -->
+    </div> -->
+    <div class="div1">
+     <a href="https://snowtrace.io/address/0xa3Aa335f1B9Ad61fc5Ce5485E5cCC547FB86cFb3"><h2  style="padding:20px; color:white; margin-right:50px"><img src="../assets/namedash1.png" alt="" style="" width="40px">  SNOWFARM</h2></a> 
+      <h4 style="padding:10px; color:white;cursor: pointer;  margin-right:80px " v-on:click="dash"><img src="../assets/dashlogo.svg" alt="" style=""> Dashboard</h4>
+      <h4 style="padding:10px; color:white;cursor: pointer; margin-right:120px" v-on:click="stake"><img src="../assets/stakelogo.svg" alt="" style="">  Stake</h4>
+      <h4 style="padding:10px; color:white;cursor: pointer; margin-right:120px" v-on:click="mintf"><img src="../assets/mintlogo.svg" alt="" style="">  Mint</h4>
+      <h5 style="padding:5px;cursor: pointer; color:#919fa6" v-on:click="mintf">Solana(SOL)</h5>
+      <h5 style="padding:5px;cursor: pointer; color:#919fa6" v-on:click="mintf">Steller(XLM)</h5>
+      <h5 style="padding:5px; cursor: pointer;color:#919fa6" v-on:click="mintf">ChainLink(LINK)</h5>
+      <h5 style="padding:5px; cursor: pointer;color:#919fa6" v-on:click="mintf">Polkadot(DOT)</h5>
+      <h4 style="padding:10px; color:white;cursor: pointer; margin-right:120px"><img src="../assets/buylogo.svg" alt="" style="" width="20px"> Buy</h4>
+      <h4 style="padding:10px; color:white;cursor: pointer; margin-right:80px " v-on:click="welcomef"><img src="../assets/roadmaplogo.svg" alt="" style="" width="20px"> Roadmap</h4>
+      <h4 style="padding:10px; color:white; margin-right:100px "><img src="../assets/sflogo.svg" alt="" style="" width="20px"> SF pro </h4>
+      
+      <a href="https://discord.gg/MJ8hhYQxtK"><img src="../assets/disi.png" alt="" style=" padding:5px;margin-right:30px: opacity:0.9" width="40px"></a>
+      <a href="https://magicrabit23.gitbook.io/snowfarm-dao-whitepaper/"><img src="../assets/paper.svg" alt="" style=" padding:5px; margin-left:30px"></a>
+      
+
+      
+      
+
     </div>
     <div class="div2">
       
@@ -337,8 +357,8 @@ export default {
       this.dashboard=false;
     },
     stake(){
-      this.welcome=true
-      this.show1=false;
+      this.welcome=false
+      this.show1=true;
       this.show2=false;
       this.show3=false;
       this.dashboard=false;
@@ -397,7 +417,7 @@ this.show1=false;
     ether(){
       this.show1=false;
       this.show2=true;
-       this.currency='LTE'
+       this.currency='LTC'
        this.func='eth'
     },tether(){
       this.show1=false;
@@ -503,43 +523,47 @@ this.show1=false;
 <style lang="scss">
 .div1{
   float: left;
-  width: 20.3%;
-  //height:100%;
+  width: 20%;
+  height:100%;
   background-color: rgba(30,54,112,255);
-  
-  margin-left: -8px;
   margin-top:-10px;
-  opacity: .9;
+  margin-left: -8px;
 }
 .div2{
-  margin-top:-10px;
+   margin-top:-10px;
   display:inline-block;
   width: 79.7%;
+  height: 100%;
   margin-left: -8px;
-  background: url(snowhd.gif) ; 
-  background-repeat: no-repeat;
-  background-size:110% 120%;
+  padding: auto;
+  
   align-content: center;
   padding-bottom: 2%;
+  -moz-box-sizing: content-box;
+-webkit-box-sizing: content-box;
+box-sizing: content-box;
   
    
   
 }
 .center{
   background-color:rgb(5, 20, 39);
-  
   height: 600px;
   padding: 0%;
-  margin-top:8%;
+margin-top: 10%;
   width: 800px;
   margin-left: auto;
   margin-right: auto;
   padding-block-end: 2%;
-  padding-block-start: 2%;
-  
-  
   opacity: 0.88;
+  margin-bottom: 2%;
   
+}.open{
+  background: url(snowhd.gif) ; 
+  background-repeat: no-repeat;
+  background-size:120% 100%;
+  background-attachment: fixed;
+  margin-top: -10px;
 }
 
 
