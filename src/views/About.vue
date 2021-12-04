@@ -503,7 +503,7 @@ this.show1=false;
 <style lang="scss">
 .div1{
   float: left;
-  width: 20%;
+  width: 20.3%;
   //height:100%;
   background-color: rgba(30,54,112,255);
   
@@ -514,11 +514,11 @@ this.show1=false;
 .div2{
   margin-top:-10px;
   display:inline-block;
-  width: 80%;
+  width: 79.7%;
   margin-left: -8px;
   background: url(snowhd.gif) ; 
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size:110% 120%;
   align-content: center;
   padding-bottom: 4%;
   
