@@ -13,17 +13,17 @@
      <a href="https://magicrabit23.gitbook.io/snowfarm-dao-whitepaper/"><img src="../assets/white.png" alt="" width="25%" style="margin-top:-10px; cursor:pointer" height="20%"></a> 
     </div> -->
     <div class="div1">
-     <a href="https://snowtrace.io/address/0xa3Aa335f1B9Ad61fc5Ce5485E5cCC547FB86cFb3"><h2  style="padding:20px; color:white; margin-right:50px"><img src="../assets/namedash1.png" alt="" style="" width="40px">  SNOWFARM</h2></a> 
-      <h4 style="padding:10px; color:white;cursor: pointer;  margin-right:80px " v-on:click="dash"><img src="../assets/dashlogo.svg" alt="" style=""> Dashboard</h4>
-      <h4 style="padding:10px; color:white;cursor: pointer; margin-right:120px" v-on:click="stake"><img src="../assets/stakelogo.svg" alt="" style="">  Stake</h4>
-      <h4 style="padding:10px; color:white;cursor: pointer; margin-right:120px" v-on:click="mintf"><img src="../assets/mintlogo.svg" alt="" style="">  Mint</h4>
-      <h5 style="padding:5px;cursor: pointer; color:#919fa6" v-on:click="mintf">Solana(SOL)</h5>
-      <h5 style="padding:5px;cursor: pointer; color:#919fa6" v-on:click="mintf">Steller(XLM)</h5>
-      <h5 style="padding:5px; cursor: pointer;color:#919fa6" v-on:click="mintf">ChainLink(LINK)</h5>
-      <h5 style="padding:5px; cursor: pointer;color:#919fa6" v-on:click="mintf">Polkadot(DOT)</h5>
-      <h4 style="padding:10px; color:white;cursor: pointer; margin-right:120px"><img src="../assets/buylogo.svg" alt="" style="" width="20px"> Buy</h4>
-      <h4 style="padding:10px; color:white;cursor: pointer; margin-right:80px " v-on:click="welcomef"><img src="../assets/roadmaplogo.svg" alt="" style="" width="20px"> Roadmap</h4>
-      <h4 style="padding:10px; color:white; margin-right:100px "><img src="../assets/sflogo.svg" alt="" style="" width="20px"> SF pro </h4>
+     <a href="https://snowtrace.io/address/0xa3Aa335f1B9Ad61fc5Ce5485E5cCC547FB86cFb3"><h2  style=" color:white; margin-right:50px"><img src="../assets/namedash1.png" alt="" style="" width="40px">  SNOWFARM</h2></a> 
+      <h4 style="padding:6%; color:white;cursor: pointer;  margin-right:80px " v-on:click="dash"><img src="../assets/dashlogo.svg" alt="" style=""> Dashboard</h4>
+      <h4 style="padding:6%; color:white;cursor: pointer; margin-right:120px" v-on:click="stake"><img src="../assets/stakelogo.svg" alt="" style="">  Stake</h4>
+      <h4 style="padding:6%; color:white;cursor: pointer; margin-right:120px" v-on:click="mintf"><img src="../assets/mintlogo.svg" alt="" style="">  Mint</h4>
+      <h5 style="padding:2%;cursor: pointer; color:#919fa6" v-on:click="mintf">Solana(SOL)</h5>
+      <h5 style="padding:2%;cursor: pointer; color:#919fa6" v-on:click="mintf">Steller(XLM)</h5>
+      <h5 style="padding:2%; cursor: pointer;color:#919fa6" v-on:click="mintf">ChainLink(LINK)</h5>
+      <h5 style="padding:2%; cursor: pointer;color:#919fa6" v-on:click="mintf">Polkadot(DOT)</h5>
+      <h4 style="padding:6%; color:white;cursor: pointer; margin-right:120px" v-on:click="welcomef"><img src="../assets/buylogo.svg" alt="" style="" width="20px"> Buy</h4>
+      <h4 style="padding:6%; color:white;cursor: pointer; margin-right:80px " v-on:click="welcomef"><img src="../assets/roadmaplogo.svg" alt="" style="" width="20px"> Roadmap</h4>
+      <h4 style="padding:6%; color:white; margin-right:100px "><img src="../assets/sflogo.svg" alt="" style="" width="20px"> SF pro </h4>
       
       <a href="https://discord.gg/MJ8hhYQxtK"><img src="../assets/disi.png" alt="" style=" padding:5px;margin-right:30px: opacity:0.9" width="40px"></a>
       <a href="https://magicrabit23.gitbook.io/snowfarm-dao-whitepaper/"><img src="../assets/paper.svg" alt="" style=" padding:5px; margin-left:30px"></a>
@@ -538,7 +538,7 @@ this.show1=false;
   padding: auto;
   
   align-content: center;
-  padding-bottom: 2%;
+  padding-bottom: 5.3%;
   -moz-box-sizing: content-box;
 -webkit-box-sizing: content-box;
 box-sizing: content-box;
