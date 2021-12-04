@@ -538,7 +538,7 @@ this.show1=false;
   padding: auto;
   
   align-content: center;
-  padding-bottom: 5.3%;
+  padding-bottom: 2%;
   -moz-box-sizing: content-box;
 -webkit-box-sizing: content-box;
 box-sizing: content-box;
@@ -549,12 +549,11 @@ box-sizing: content-box;
 .center{
   background-color:rgb(5, 20, 39);
   height: 600px;
-  padding: 0%;
+  padding: 3%;
 margin-top: 10%;
   width: 800px;
   margin-left: auto;
   margin-right: auto;
-  padding-block-end: 2%;
   opacity: 0.88;
   margin-bottom: 2%;
   
