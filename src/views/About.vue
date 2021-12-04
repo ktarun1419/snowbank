@@ -15,7 +15,7 @@
     <div class="div1">
      <a href="https://snowtrace.io/address/0xa3Aa335f1B9Ad61fc5Ce5485E5cCC547FB86cFb3"><h2  style=" color:white; margin-right:10%;margin-top:20%"><img src="../assets/namedash1.png" alt="" style="" width="40px">  SNOWFARM</h2></a> 
       <h4 style="padding:3%;margin-top:70px;font-size: 18px;font-weight: 400;font-family: Montserrat; color:white;cursor: pointer;  margin-right:80px " v-on:click="dash"><img src="../assets/dashlogo.svg" alt="" style=""> Dashboard</h4>
-      <h4 style="padding:3%;font-size: 18px;font-weight: 400;font-family: Montserrat; color:white;cursor: pointer; margin-right:120px" v-on:click="stake"><img src="../assets/stakelogo.svg" alt="" style="">  Stake</h4>
+      <h4 style="padding:3%;font-size: 18px;font-weight: 400;font-family: Montserrat; color:white;cursor: pointer; margin-right:120px" v-on:click="welcomef"><img src="../assets/stakelogo.svg" alt="" style="">  Stake</h4>
       <h4 style="padding:3%;font-size: 18px;font-weight: 400;font-family: Montserrat; color:white;cursor: pointer; margin-right:120px" v-on:click="mintf"><img src="../assets/mintlogo.svg" alt="" style="">  Mint</h4>
       <h5 style="padding:3%;cursor: pointer;font-size: 18px;font-weight: 400;font-family: Montserrat; color:#919fa6" v-on:click="mintf">Solana(SOL)</h5>
       <h5 style="padding:3%;cursor: pointer;font-size: 18px;font-weight: 400;font-family: Montserrat; color:#919fa6" v-on:click="mintf">Stellar(XLM)</h5>
