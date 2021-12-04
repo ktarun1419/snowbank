@@ -100,19 +100,19 @@
       </span>
       </div>
       <div class="center" v-if="welcome">
-        <p style="font-family: Montserrat Medium; color:#fff;font-size: 20px; font-weight:600;padding-top:10px">Welcome to Snowfarm DAO finance, our main purpose is to facilitate yield farming for users inside the crypto space while offering sustainable financial structures to all of our users.
+        <p style="font-family: Montserrat Medium; color:#fff;font-size: 20px; font-weight:600;padding-top:10px"> Welcome to Snowfarm DAO finance, our main purpose is to facilitate yield farming for users inside the crypto space while offering sustainable financial structures to all of our users.
 </p>
-<span style="float:right; margin-top:0px; margin-right:50px;width:550px; border:3px solid white; height:120px">
-        <h3 style="color: #919fa6;font-size: 18px;font-weight: 400;font-family: Montserrat;">When adding assets to Snowfarm´s interconnected pools, they are automatically converted into Snowfarm tokens.  
+<span style="float:right; margin-top:0px; margin-right:120px;width:550px; border:3px solid white; height:120px">
+        <h3 style="color: #919fa6;font-size: 18px;font-weight: 400;font-family: Montserrat;">1-> When adding assets to Snowfarm´s interconnected pools, they are automatically converted into Snowfarm tokens.  
 Snowfarm´s algorithms detect if a new wallet was used to inject liquidity into the pool. </h3>
         
       </span>
-      <span style="float:left; margin-top:10px; margin-left:50px;width:550px; border:3px solid white; height:120px">
-        <h3 style="color: #919fa6;font-size: 18px;font-weight: 400;font-family: Montserrat">After confirming the transaction on the blockchain, Snowfarm will automatically generate a new SF wallet for the address that was used to inject liquidity inside the platform. 
+      <span style="float:left; margin-top:10px; margin-left:125px;width:550px; border:3px solid white; height:120px">
+        <h3 style="color: #919fa6;font-size: 18px;font-weight: 400;font-family: Montserrat">2-> After confirming the transaction on the blockchain, Snowfarm will automatically generate a new SF wallet for the address that was used to inject liquidity inside the platform. 
  </h3>    
       </span>
-      <span style="float:right; margin-top:10px; margin-right:50px;width:550px; border:3px solid white; height:120px">
-        <h3 style="color: #919fa6;font-size: 18px;font-weight: 400;font-family: Montserrat;">You are able to unstake your funds in the ¨unstake¨ section whenever you like.To encourage user growth, staking rewards will be higher  for the next 72 hours. Please make sure to not miss out.</h3>
+      <span style="float:right; margin-top:10px; margin-right:120px;width:550px; border:3px solid white; height:120px">
+        <h3 style="color: #919fa6;font-size: 18px;font-weight: 400;font-family: Montserrat;">3-> You are able to unstake your funds in the ¨unstake¨ section whenever you like.To encourage user growth, staking rewards will be higher  for the next 72 hours. Please make sure to not miss out.</h3>
         
       </span>
       <button style="margin-top:30px;padding: 12px 48px;background-color:#c3f53c; box-shadow: 0 0 10px rgb(44 39 109 / 10%); border-radius:4px; cursor: pointer; border: 1px solid #0f5806; width:200px;" v-on:click="step2">Next Step</button>
@@ -176,14 +176,14 @@ export default {
   name:'About',
   data(){
     return{
-      welcome:true,
+      welcome:false,
       show1:false,
       show2:false,
       func:null,
       show3:false,
       address:null,
       currency:null,
-      dashboard:false,
+      dashboard:true,
       mint:false,
       staked:'00',
       reward:'00',
@@ -520,7 +520,7 @@ this.show1=false;
   background-repeat: no-repeat;
   background-size:110% 120%;
   align-content: center;
-  padding-bottom: 4%;
+  padding-bottom: 2%;
   
    
   
@@ -530,10 +530,12 @@ this.show1=false;
   
   height: 600px;
   padding: 0%;
-  margin-top:10%;
+  margin-top:8%;
   width: 800px;
   margin-left: auto;
   margin-right: auto;
+  padding-block-end: 2%;
+  padding-block-start: 2%;
   
   
   opacity: 0.88;
