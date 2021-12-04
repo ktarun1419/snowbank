@@ -526,7 +526,7 @@ this.show1=false;
   width: 17%;
   height:100%;
   background-color: rgba(30,54,112,255);
-  margin-top:-10px;
+  margin-top:-8.1px;
   margin-left: -8px;
 }
 .div2{
