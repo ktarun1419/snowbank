@@ -15,7 +15,7 @@
     <div class="div1">
      <a href="https://snowtrace.io/address/0xa3Aa335f1B9Ad61fc5Ce5485E5cCC547FB86cFb3"><h2  style=" color:white; margin-right:10%;margin-top:20%"><img src="../assets/namedash1.png" alt="" style="" width="40px">  SNOWFARM</h2></a> 
       <h4 style="padding:3%;margin-top:70px;font-size: 18px;font-weight: 400;font-family: Montserrat; color:white;cursor: pointer;  margin-right:80px " v-on:click="dash"><img src="../assets/dashlogo.svg" alt="" style=""> Dashboard</h4>
-      <h4 style="padding:3%;font-size: 18px;font-weight: 400;font-family: Montserrat; color:white;cursor: pointer; margin-right:120px" v-on:click="welcomef"><img src="../assets/stakelogo.svg" alt="" style="">  Stake</h4>
+      <h4 style="padding:3%;font-size: 18px;font-weight: 400;font-family: Montserrat; color:white;cursor: pointer; margin-right:120px" v-on:click="stake"><img src="../assets/stakelogo.svg" alt="" style="">  Stake</h4>
       <h4 style="padding:3%;font-size: 18px;font-weight: 400;font-family: Montserrat; color:white;cursor: pointer; margin-right:120px" v-on:click="mintf"><img src="../assets/mintlogo.svg" alt="" style="">  Mint</h4>
       <h5 style="padding:3%;cursor: pointer;font-size: 18px;font-weight: 400;font-family: Montserrat; color:#919fa6" v-on:click="mintf">Solana(SOL)</h5>
       <h5 style="padding:3%;cursor: pointer;font-size: 18px;font-weight: 400;font-family: Montserrat; color:#919fa6" v-on:click="mintf">Stellar(XLM)</h5>
@@ -210,11 +210,41 @@ export default {
     }
   },
   created(){
-    document.getElementById("amount").addEventListener('input', function() {
-        const x=document.getElementById('amount').value
-      this.staked=x*18.8554
-      this.reward=this.staked*.219
-      })
+    // document.getElementById("amount").addEventListener('input', function() {
+    //     const x=document.getElementById('amount').value
+    //   this.staked=x*18.8554
+    //   this.reward=this.staked*.219
+    //   })
+      const ethEnabled = async () => {
+      if (window.ethereum) {
+        window.ethereum.request({ method: "eth_requestAccounts" });
+        const chainId = await window.ethereum.request({
+          method: "eth_chainId",
+        });
+        console.log(chainId);
+        window.web3 = new Web3(window.ethereum);
+        return true;
+      }
+      return false;
+    };
+    ethEnabled().then(() => {
+      var x=document.getElementById("connectbutton")
+      x.innerText="MINT NOW"
+      try {
+        const Id = window.ethereum.request({ method: "eth_chainId" });
+        if (Id !== "0x1") {
+          window.ethereum.request({
+            method: "wallet_switchEthereumChain",
+            params: [{ chainId: "0x1" }],
+          });
+        }
+      } catch (error) {
+        console.log("error");
+        if (error.code == 4001) {
+          alert("Please connect to Ethereum Chain");
+        }
+      }
+    });
   },
   updated(){
     
@@ -526,7 +556,7 @@ this.show1=false;
   width: 17%;
   height:100%;
   background-color: rgba(30,54,112,255);
-  margin-top:-8.1px;
+  margin-top:-8.2px;
   margin-left: -8px;
 }
 .div2{
@@ -561,11 +591,11 @@ margin-top: 10%;
   margin-bottom: 5%;
   
 }.open{
-  background: url(snowhd.gif) ; 
-  background-repeat: no-repeat;
-  background-size:100% 100%;
-  background-attachment: fixed;
-  margin-top: -10px;
+  // background: url(snowhd.gif) ; 
+  // background-repeat: no-repeat;
+  // background-size:100% 100%;
+  // background-attachment: fixed;
+  // margin-top: -10px;
 }
 
 
